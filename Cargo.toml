@@ -3,8 +3,9 @@
 members = [
     "casper-private-auction-core",
     "casper-private-auction-installer",
+    "integration-tests",
     "bid-purse",
-    "tests"
+    "tests",
 ]
 
 [profile.release]
