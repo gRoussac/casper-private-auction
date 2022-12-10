@@ -1,0 +1,28 @@
+[package]
+name = "integration-tests"
+version = "0.9.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+casper-contract = "1.4.4"
+casper-engine-test-support = "2.2.0"
+casper-execution-engine = "2.0.1"
+casper-types = "1.5.0"
+rand = "*"
+maplit = "*"
+hex = "*"
+tests = { path = "../tests" }
+
+[lib]
+name = "integration_tests"
+path = "src/lib.rs"
+
+[features]
+default = [
+  "casper-contract/std",
+  "casper-types/std",
+  "casper-engine-test-support/test-support",
+  "casper-contract/test-support",
+]
